@@ -1,32 +1,19 @@
 /* ------------------------- */
-/* Style global de la page   */
+/* Container principal       */
 /* ------------------------- */
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f3f4f6; /* gris clair */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0fe06d;
-}
-
-/* Container principal */
 .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  background-color: #d3c1ae;
+  font-family: Arial, sans-serif;
 }
 
 /* Titre */
-h1 {
+.app-container h1 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #111827;
@@ -36,13 +23,13 @@ h1 {
 /* Bouton de lancement       */
 /* ------------------------- */
 .button-spin {
-  padding: 10px 20px;
-  background-color: #3b82f6; /* bleu */
+  padding: 15px 25px;
+  background-color: #3b82f6;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 20px;
   transition: background-color 0.2s;
 }
@@ -75,19 +62,7 @@ h1 {
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   max-width: 90%;
   min-width: 300px;
-}
-
-/* Titre du modal */
-.modal-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #111827;
-}
-
-/* Texte du résultat */
-.modal-content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  transform: scale(0);
 }
 
 /* Bouton fermer modal */
@@ -105,5 +80,40 @@ h1 {
   background-color: #2563eb;
 }
 
+/* Animation popup */
+@keyframes scale-in {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
 
-  
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+/* Image au-dessus de la roulette */
+.logo-image {
+  width: 60%;          /* taille idéale pour mobile */
+  max-width: 250px;    /* limite pour éviter une image trop grande */
+  height: auto;        /* garde les proportions */
+  display: block;
+  margin: 0 auto 20px; /* centre + marge en dessous */
+}
+
+/* Pour les écrans plus grands (tablette, PC) */
+@media (min-width: 600px) {
+  .logo-image {
+    width: 40%;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .logo-image {
+    width: 40%;
+    max-width: 500px;
+  }
+}
+body {
+  background-color: #d3c1ae;
+}
