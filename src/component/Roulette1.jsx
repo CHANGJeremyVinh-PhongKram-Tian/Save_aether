@@ -39,7 +39,7 @@ const Roulette1 = () => {
     <div className="app-container">
       <img src={logo} alt="Logo" className="logo-image" />
 
-      <h1>🎡 Resource wheels</h1>
+      <h1>🎡 Resource wheel</h1>
 
       <Wheel
         mustStartSpinning={mustSpin}
