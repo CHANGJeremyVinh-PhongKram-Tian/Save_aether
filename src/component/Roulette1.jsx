@@ -74,7 +74,7 @@ const Roulette1 = () => {
               className="modal-close"
               onClick={() => navigate("/roulette2")}
             >
-              Continuer vers la prochaine roue
+              Continue with the next wheel
             </button>
           </div>
         </div>
