@@ -29,7 +29,7 @@ const Roulette2 = () => {
   return (
     <div className="app-container">
       <image src="/logo.png" alt="Logo" className="logo-image" />
-      <img src={logo} alt="Logo" className="logo-image" />
+      
       <h1>🎡 Number wheel</h1>
 
       <Wheel
